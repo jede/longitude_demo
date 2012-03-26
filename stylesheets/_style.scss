@@ -1,0 +1,93 @@
+@import "compass";
+@import "compass/reset";
+
+$arvo: 'Arvo', serif;
+$oswald: 'Oswald', sans-serif;
+
+$brown: rgba(74,67,28,0.4);
+$white: rgba(255,255,255,0.7);
+
+html, body {
+  font-family: $arvo;
+  font-size: 19px;
+  line-height: 1.5em;
+  @include background(
+    linear-gradient(left, $brown 1px, transparent 1px), 
+    linear-gradient(left, $white 2px, transparent 2px), 
+    url(map.jpg));
+
+  background-size: 80px 80px;
+  background-position: top center;
+
+  color: #273845;
+  @include text-shadow(#FFF 1px 1px)
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $oswald;
+  font-weight: bold;
+  font-size: 44px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-top: 1em;
+  margin-bottom: 0.6em;  
+}
+
+header {
+  @include clearfix;
+  background-color: #15222d;
+  @include box-shadow(rgba(0, 0, 0, 0.55) 0px -8px 25px inset);
+
+  hgroup {
+      margin-top: 70px;
+      margin-bottom: 30px;
+      text-indent: -9999px;
+      background: url(logo.png) center bottom no-repeat;
+      background-size: 100%;
+      max-height: 153px;
+      line-height: 153px;
+      max-width: 513px;
+  }
+  .longitudes {
+    float: left;
+    overflow: hidden;
+    height: 1.5em;
+
+    &.left {
+      direction: rtl;
+      text-align: right;
+      span { text-align: left; }
+    }
+    &.center {
+      text-align: center;
+      span { width: 30px; }
+    }
+    &.right {
+      direction: ltr;
+      text-align: left;
+      span { text-align: right; }
+    }
+    span {
+      display: inline-block;
+      text-align: center;
+      width: 70px;
+    }
+  }
+}
+
+div.frame {
+  height: 29px;
+  @include background(
+    linear-gradient($brown 1px, transparent 1px),
+    linear-gradient($white 2px, transparent 2px),
+    linear-gradient(transparent 5px, $brown 6px, transparent 6px),
+    linear-gradient(transparent 6px, $white 6px, $white 7px, transparent 7px),
+    url(map.jpg));
+  background-size: 100px 22px;
+}
+
+body > article {
+  background-position: top center;
+  background-image: url(map.jpg);
+  background-size: 80px 80px;
+}

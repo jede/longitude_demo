@@ -1,0 +1,213 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+html, body {
+  font-family: "Arvo", serif;
+  font-size: 19px;
+  line-height: 1.5em;
+  background: -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 0% 50%, 2 50%, color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), url(map.jpg);
+  background: -webkit-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
+  background: -moz-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
+  background: -o-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
+  background: -ms-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
+  background: linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
+  background-size: 80px 80px;
+  background-position: top center;
+  color: #273845;
+  text-shadow: white 1px 1px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 44px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-top: 1em;
+  margin-bottom: 0.6em; }
+
+header {
+  overflow: hidden;
+  *zoom: 1;
+  background-color: #15222d;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset; }
+  header hgroup {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-indent: -9999px;
+    background: url(logo.png) center bottom no-repeat;
+    background-size: 100%;
+    max-height: 153px;
+    line-height: 153px;
+    max-width: 513px; }
+  header .longitudes {
+    float: left;
+    overflow: hidden;
+    height: 1.5em; }
+    header .longitudes.left {
+      direction: rtl;
+      text-align: right; }
+      header .longitudes.left span {
+        text-align: left; }
+    header .longitudes.center {
+      text-align: center; }
+      header .longitudes.center span {
+        width: 30px; }
+    header .longitudes.right {
+      direction: ltr;
+      text-align: left; }
+      header .longitudes.right span {
+        text-align: right; }
+    header .longitudes span {
+      display: inline-block;
+      text-align: center;
+      width: 70px; }
+
+div.frame {
+  height: 29px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 2, color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 6, color-stop(83.333%, transparent), color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 7, color-stop(85.714%, transparent), color-stop(85.714%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), url(map.jpg);
+  background: -webkit-linear-gradient(rgba(74, 67, 28, 0.4) 1px, transparent 1px), -webkit-linear-gradient(rgba(255, 255, 255, 0.7) 2px, transparent 2px), -webkit-linear-gradient(transparent 5px, rgba(74, 67, 28, 0.4) 6px, transparent 6px), -webkit-linear-gradient(transparent 6px, rgba(255, 255, 255, 0.7) 6px, rgba(255, 255, 255, 0.7) 7px, transparent 7px), url(map.jpg);
+  background: -moz-linear-gradient(rgba(74, 67, 28, 0.4) 1px, transparent 1px), -moz-linear-gradient(rgba(255, 255, 255, 0.7) 2px, transparent 2px), -moz-linear-gradient(transparent 5px, rgba(74, 67, 28, 0.4) 6px, transparent 6px), -moz-linear-gradient(transparent 6px, rgba(255, 255, 255, 0.7) 6px, rgba(255, 255, 255, 0.7) 7px, transparent 7px), url(map.jpg);
+  background: -o-linear-gradient(rgba(74, 67, 28, 0.4) 1px, transparent 1px), -o-linear-gradient(rgba(255, 255, 255, 0.7) 2px, transparent 2px), -o-linear-gradient(transparent 5px, rgba(74, 67, 28, 0.4) 6px, transparent 6px), -o-linear-gradient(transparent 6px, rgba(255, 255, 255, 0.7) 6px, rgba(255, 255, 255, 0.7) 7px, transparent 7px), url(map.jpg);
+  background: -ms-linear-gradient(rgba(74, 67, 28, 0.4) 1px, transparent 1px), -ms-linear-gradient(rgba(255, 255, 255, 0.7) 2px, transparent 2px), -ms-linear-gradient(transparent 5px, rgba(74, 67, 28, 0.4) 6px, transparent 6px), -ms-linear-gradient(transparent 6px, rgba(255, 255, 255, 0.7) 6px, rgba(255, 255, 255, 0.7) 7px, transparent 7px), url(map.jpg);
+  background: linear-gradient(rgba(74, 67, 28, 0.4) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.7) 2px, transparent 2px), linear-gradient(transparent 5px, rgba(74, 67, 28, 0.4) 6px, transparent 6px), linear-gradient(transparent 6px, rgba(255, 255, 255, 0.7) 6px, rgba(255, 255, 255, 0.7) 7px, transparent 7px), url(map.jpg);
+  background-size: 100px 22px; }
+
+body > article {
+  background-position: top center;
+  background-image: url(map.jpg);
+  background-size: 80px 80px; }
+
+@media (max-width: 320px) {
+  hgroup {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center; }
+    hgroup h1 {
+      line-height: 200%; }
+
+  .longitudes {
+    width: 45.625%; }
+    .longitudes.center {
+      width: 8.75%; }
+
+  body > article {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 0 auto;
+    width: 93.75%;
+    background-image: url(map.jpg); }
+    body > article > * {
+      margin-left: 3.125%;
+      margin-right: 3.125%; } }
+@media (min-width: 321px) and (max-width: 480px) {
+  hgroup {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center; }
+    hgroup h1 {
+      line-height: 122px; }
+
+  .longitudes {
+    width: 47.083%; }
+    .longitudes.center {
+      width: 5.833%; }
+
+  body > article {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 0 auto;
+    width: 95.833%;
+    background-image: url(map.jpg); }
+    body > article > * {
+      margin-left: 2.083%;
+      margin-right: 2.083%; } }
+@media (min-width: 481px) and (max-width: 720px) {
+  hgroup {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center; }
+    hgroup h1 {
+      line-height: 122px; }
+
+  .longitudes {
+    width: 48.056%; }
+    .longitudes.center {
+      width: 3.889%; }
+
+  body > article {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 0 auto;
+    width: 97.222%;
+    background-image: url(map.jpg); }
+    body > article > * {
+      margin-left: 1.389%;
+      margin-right: 1.389%; } }
+@media (min-width: 721px) {
+  hgroup {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center; }
+    hgroup h1 {
+      line-height: 122px; }
+
+  .longitudes {
+    width: 48.056%; }
+    .longitudes.center {
+      width: 3.889%; }
+
+  body > article {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 0 auto;
+    width: 700px;
+    background-image: url(map.jpg); }
+    body > article > * {
+      margin-left: 10px;
+      margin-right: 10px; } }

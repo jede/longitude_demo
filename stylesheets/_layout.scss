@@ -1,0 +1,41 @@
+@import 'longitude';
+
+
+@include longitude(4 6 9) {
+  hgroup {
+    max-width: (1100px/2);
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      @if column-count() <= 3 {
+        line-height: 150%;
+      } @else if column-count() <= 4 {
+        line-height: 200%;
+      } @else {
+        line-height: (244px/2);
+      }
+    }
+  }
+
+  .longitudes {
+    $center-width: (35%/column-count());
+    width: 50% - $center-width / 2;
+    &.center {
+      width: $center-width;
+    }
+  }
+
+  body > article {
+    @include clearfix;
+    margin: 0 auto;
+    width: full-width($outer-gutters: false);
+    background-image: url(map.jpg);
+
+    > * {
+      @include gutters;
+    }
+  }
+}
+
+
