@@ -6,6 +6,7 @@ $oswald: 'Oswald', sans-serif;
 
 $brown: rgba(74,67,28,0.4);
 $white: rgba(255,255,255,0.7);
+$blue: #273845;
 
 html, body {
   font-family: $arvo;
@@ -19,7 +20,7 @@ html, body {
   background-size: 80px 80px;
   background-position: top center;
 
-  color: #273845;
+  color: $blue;
   @include text-shadow(#FFF 1px 1px)
 }
 
@@ -48,21 +49,36 @@ header {
       line-height: 153px;
       max-width: 513px;
   }
+
   .longitudes {
+    border-top: 1px solid hsl(206, 28%, 16%);
     float: left;
     overflow: hidden;
-    height: 1.5em;
+    font-family: $oswald;
+    font-size: 14px;
+    line-height: 1.6em;
+    height: 1.6em;
+    width: 50%;
+    @include text-shadow(none);
 
+    $adjusment: 5px;
     &.left {
+      margin-left: $adjusment;
       direction: rtl;
       text-align: right;
       span { text-align: left; }
+    }
+    &.left:before {
+      content: "0";
+      margin-left: 0 - $adjusment;
     }
     &.center {
       text-align: center;
       span { width: 30px; }
     }
     &.right {
+      padding-left: $adjusment;
+      margin-left: -2 * $adjusment;
       direction: ltr;
       text-align: left;
       span { text-align: right; }

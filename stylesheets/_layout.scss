@@ -18,14 +18,6 @@
     }
   }
 
-  .longitudes {
-    $center-width: (35%/column-count());
-    width: 50% - $center-width / 2;
-    &.center {
-      width: $center-width;
-    }
-  }
-
   body > article {
     @include clearfix;
     margin: 0 auto;

@@ -86,19 +86,31 @@ header {
     line-height: 153px;
     max-width: 513px; }
   header .longitudes {
+    border-top: 1px solid #1d2a34;
     float: left;
     overflow: hidden;
-    height: 1.5em; }
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    line-height: 1.6em;
+    height: 1.6em;
+    width: 50%;
+    text-shadow: none; }
     header .longitudes.left {
+      margin-left: 5px;
       direction: rtl;
       text-align: right; }
       header .longitudes.left span {
         text-align: left; }
+    header .longitudes.left:before {
+      content: "0";
+      margin-left: -5px; }
     header .longitudes.center {
       text-align: center; }
       header .longitudes.center span {
         width: 30px; }
     header .longitudes.right {
+      padding-left: 5px;
+      margin-left: -10px;
       direction: ltr;
       text-align: left; }
       header .longitudes.right span {
@@ -131,11 +143,6 @@ body > article {
     hgroup h1 {
       line-height: 200%; }
 
-  .longitudes {
-    width: 45.625%; }
-    .longitudes.center {
-      width: 8.75%; }
-
   body > article {
     overflow: hidden;
     *zoom: 1;
@@ -152,11 +159,6 @@ body > article {
     text-align: center; }
     hgroup h1 {
       line-height: 122px; }
-
-  .longitudes {
-    width: 47.083%; }
-    .longitudes.center {
-      width: 5.833%; }
 
   body > article {
     overflow: hidden;
@@ -175,11 +177,6 @@ body > article {
     hgroup h1 {
       line-height: 122px; }
 
-  .longitudes {
-    width: 48.056%; }
-    .longitudes.center {
-      width: 3.889%; }
-
   body > article {
     overflow: hidden;
     *zoom: 1;
@@ -196,11 +193,6 @@ body > article {
     text-align: center; }
     hgroup h1 {
       line-height: 122px; }
-
-  .longitudes {
-    width: 48.056%; }
-    .longitudes.center {
-      width: 3.889%; }
 
   body > article {
     overflow: hidden;
