@@ -1,0 +1,11 @@
+@import "longitude";
+
+/* Breakpoints in columns */
+@include longitude($breakpoints: 4 8) {
+  section {
+    /* 2 per row when narrow layout, and 4 when wide */
+    width: columns(2);
+    /* this gives us some space between the sections */
+    @include gutters;
+  }
+}

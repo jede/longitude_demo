@@ -4,7 +4,7 @@
 @include longitude(4 6 9) {
   hgroup {
     max-width: (1100px/2);
-    margin: 0 auto;
+    margin: gutter() auto;
     text-align: center;
 
     h1 {
@@ -18,14 +18,44 @@
     }
   }
 
-  body > article {
-    @include clearfix;
+  .body_section {
     margin: 0 auto;
     width: full-width($outer-gutters: false);
     background-image: url(map.jpg);
+  }
+
+  body > article  {
+    @extend .body_section;
+    @include clearfix;
 
     > * {
       @include gutters;
+    }
+  }
+
+  div#demo1 {
+    @extend .body_section;
+    @include clearfix;
+    article {
+      float: left;
+      width: columns(min(6, column-count()));
+    }
+    aside {
+      float: left;
+      width: columns(3);
+      display: if(column-count() > 6, block, none);
+    }
+  }
+
+  div#demo2 {
+    @extend .body_section;
+    width: full-width();
+    .box {
+      margin: gutter();
+      float: left;
+      width: columns(1);
+      background-color: $blue;
+      height: 40px;
     }
   }
 }

@@ -1,0 +1,14 @@
+<div class="highlight"><pre><span class="k">@import</span> <span class="s2">&quot;longitude&quot;</span><span class="p">;</span>
+
+<span class="c">/* Breakpoints in columns */</span>
+<span class="k">@include</span> <span class="nt">longitude</span><span class="o">(</span><span class="err">$</span><span class="nt">breakpoints</span><span class="o">:</span> <span class="nt">4</span> <span class="nt">8</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="c">/* 2 per row when narrow layout, and 4 when wide */</span>
+    <span class="k">width</span><span class="o">:</span> <span class="n">columns</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+    <span class="c">/* this gives us some space between the sections */</span>
+    <span class="o">@</span><span class="n">include</span> <span class="n">gutters</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>

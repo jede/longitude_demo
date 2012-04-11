@@ -63,6 +63,9 @@
     Since Longitude only consits of calculations, it doesnt add any overhead 
     to your CSS. No extra stylesheets to include in your final CSS, nothing.
     </p>
+    <figure>
+      <img src="example.png" title="Example" alt="Example illustration"/>
+    </figure>
   </article>
   <article>
     <h1>What is it <em>not</em>?</h1>
@@ -72,55 +75,128 @@
     </p>
     <p>
     Fear not! Longitude makes it a breeze. It is acctually really handy to be 
-    able to taylor make the grid for exclusivly for the web site you are creating!
+    able to taylor the grid exclusivly for the web site you are creating!
     </p>
     <p>
     Longitude is not a collection of UI styles, it just helpes you with the 
     responsive layout, thats all. So if you want to combine it with something
-    else, go ahead! Or if you want to rol your own, please feel free. Longitude
+    else, go ahead! Or if you want to roll your own, please feel free. Longitude
     will stay out of your way.
     </p>
   </article>
   <article>
-    <h1>Demonstration</h1>
+    <h1>Example</h1>
     <p>
-    Here are some examples of how you can make your own grid. <strong>Go ahead! Resize the page!</strong>
+    Here are some examples of how you can make your own grid. Longitude uses columns as units. Look at the following SCSS:
     </p>
-    <aside>
-      <h1>Somewhat useless sidebar</h1>
-      <ul>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-      </ul>
-    </aside>
-    <article class="example">
-      <h1>Flexible</h1>
-      <p>
-      This is some example content.
-      </p>
-    </article>
-    <article class="sample">
-      <h1>This content gets some more space</h1>
-      <p>
-      This is some example content. And some more example.
-      </p>
-    </article>
-    <article class="sample">
-      <h1>It's up to you!</h1>
-      <p>
-      This is some example content.
-      </p>
-    </article>
-    <article class="example">
-      <h1>The stylesheet is the limit</h1>
-      <p>
-      This is some example content. And some more example.
-      </p>
-    </article>
+<div class="highlight"><pre><span class="c">/* Breakpoints in columns */</span>
+<span class="k">@include</span> <span class="nt">longitude</span><span class="o">(</span><span class="err">$</span><span class="nt">breakpoints</span><span class="o">:</span> <span class="nt">4</span> <span class="nt">8</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="c">/* 2 per row when narrow layout, and 4 when wide */</span>
+    <span class="k">width</span><span class="o">:</span> <span class="n">columns</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+    <span class="c">/* this gives us some space between the sections */</span>
+    <span class="k">@include</span> <span class="n">gutters</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+    <p>
+     It translates to CSS like this:
+    </p>
+
+<div class="highlight"><pre><span class="c">/* Breakpoints in columns */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="c">/* 2 per row when narrow layout, and 4 when wide */</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">43</span><span class="o">.</span><span class="m">75</span><span class="o">%</span><span class="p">;</span>
+    <span class="c">/* this gives us some space between the sections */</span>
+    <span class="k">margin-left</span><span class="o">:</span> <span class="m">3</span><span class="o">.</span><span class="m">125</span><span class="o">%</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="o">:</span> <span class="m">3</span><span class="o">.</span><span class="m">125</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">321px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">640px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="c">/* 2 per row when narrow layout, and 4 when wide */</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">21</span><span class="o">.</span><span class="m">875</span><span class="o">%</span><span class="p">;</span>
+    <span class="c">/* this gives us some space between the sections */</span>
+    <span class="k">margin-left</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">563</span><span class="o">%</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">563</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">641px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="c">/* 2 per row when narrow layout, and 4 when wide */</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">140px</span><span class="p">;</span>
+    <span class="c">/* this gives us some space between the sections */</span>
+    <span class="k">margin-left</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</pre>
+</div>
   </article>
+  <article>
+    <h1>Demonstration</h1>
+  </article>
+  <div id="demo1">
+  <article>
+    <h1>Flexible</h1>
+    <p>
+    This is some example content.
+    </p>
+  </article>
+  <aside>
+    <h1>A sidebar</h1>
+    <p>Lets show this only when there is room for it.</p>
+    <ul>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+    </ul>
+  </aside>
+  </div>
+  <article>
+  <h1>Grid</h1>
+  <p>These are 18 boxes which try to show how the current grid works.</p>
+  </article>
+  <div id="demo2">
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+    <div class="box"> </div>
+  </div>
   <article>
     <h1>Browser support</h1>
     <p>Longitude supports most modern browsers, including:</p>
