@@ -10,17 +10,17 @@ $brown: rgba(74,67,28,0.4);
 $white: rgba(255,255,255,0.7);
 $blue: #273845;
 $dark-blue: #15222d;
+$light-blue: #2e4961;
 
 html, body {
   font-family: $arvo;
-  font-size: 19px;
   line-height: 1.5em;
   @include background(
     linear-gradient(left, $brown 1px, transparent 1px), 
     linear-gradient(left, $white 2px, transparent 2px), 
     url(map.jpg));
 
-  background-size: 80px 80px;
+  background-size: 141px 141px;
   background-position: top center;
 
   color: $blue;
@@ -30,19 +30,25 @@ html, body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $oswald;
   font-weight: bold;
-  font-size: 44px;
   line-height: 1.2em;
-  margin-top: 1em;
+  margin-top: 0.6em;
   margin-bottom: 0.6em;  
 }
 
-header {
+a {
+  color: $light-blue;
+}
+
+header, footer {
   @include clearfix;
   background-color: $dark-blue;
+}
+
+header {
+  @include box-shadow(rgba(0, 0, 0, 0.55) 0px -8px 25px inset);
   @include background(
     radial-gradient(rgba(255, 255, 255, 0.15) 0, transparent 55%),
     radial-gradient(rgba(255, 255, 255, 0.17) 0, transparent 35%), $dark-blue);
-  @include box-shadow(rgba(0, 0, 0, 0.55) 0px -8px 25px inset);
   background-size: 1500px 1800px, 600px 1800px;
   background-position: top center;
   background-repeat: no-repeat;
@@ -55,8 +61,14 @@ header {
       background: url(logo.png) center bottom no-repeat;
       background-size: 95%;
       max-height: 153px;
-      line-height: 153px;
       max-width: 513px;
+  }
+
+  .fork-me {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
   }
 
   .longitudes {
@@ -100,6 +112,15 @@ header {
   }
 }
 
+
+footer {
+  @include box-shadow(rgba(255, 255, 255, 0.55) 0px -4px 3px 0px, rgba(0, 0, 0, 0.55) 0px 8px 25px inset);
+  text-align: center;
+  text-shadow: none;
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+
 div.frame {
   height: 29px;
   @include background(
@@ -114,6 +135,11 @@ div.frame {
 body > article {
   background-position: top center;
   background-image: url(map.jpg);
+
+  &:last-of-type {
+    padding-bottom: 100px;
+  }
+
   background-size: 80px 80px;
   p {
     margin-bottom: 1em;
@@ -131,6 +157,7 @@ body > article {
 .highlight {
   border: 1px solid $brown;
   margin-bottom: 2em;
+  overflow-x: auto;
 }
 
 pre {

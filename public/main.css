@@ -327,7 +327,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Literal.Number.Integer.Long */
 html, body {
   font-family: "Arvo", serif;
-  font-size: 19px;
   line-height: 1.5em;
   background: -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 0% 50%, 2 50%, color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), url(map.jpg);
   background: -webkit-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
@@ -335,7 +334,7 @@ html, body {
   background: -o-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
   background: -ms-linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
   background: linear-gradient(left, rgba(74, 67, 28, 0.4) 1px, transparent 1px), linear-gradient(left, rgba(255, 255, 255, 0.7) 2px, transparent 2px), url(map.jpg);
-  background-size: 80px 80px;
+  background-size: 141px 141px;
   background-position: top center;
   color: #273845;
   text-shadow: white 1px 1px; }
@@ -343,24 +342,28 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 44px;
   line-height: 1.2em;
-  margin-top: 1em;
+  margin-top: 0.6em;
   margin-bottom: 0.6em; }
 
-header {
+a {
+  color: #2e4961; }
+
+header, footer {
   overflow: hidden;
   *zoom: 1;
-  background-color: #15222d;
+  background-color: #15222d; }
+
+header {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 55, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(55%, transparent)), -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 35, color-stop(0%, rgba(255, 255, 255, 0.17)), color-stop(35%, transparent)), #15222d;
   background: -webkit-radial-gradient(rgba(255, 255, 255, 0.15) 0%, transparent 55%), -webkit-radial-gradient(rgba(255, 255, 255, 0.17) 0%, transparent 35%), #15222d;
   background: -moz-radial-gradient(rgba(255, 255, 255, 0.15) 0%, transparent 55%), -moz-radial-gradient(rgba(255, 255, 255, 0.17) 0%, transparent 35%), #15222d;
   background: -o-radial-gradient(rgba(255, 255, 255, 0.15) 0%, transparent 55%), -o-radial-gradient(rgba(255, 255, 255, 0.17) 0%, transparent 35%), #15222d;
   background: -ms-radial-gradient(rgba(255, 255, 255, 0.15) 0%, transparent 55%), -ms-radial-gradient(rgba(255, 255, 255, 0.17) 0%, transparent 35%), #15222d;
   background: radial-gradient(rgba(255, 255, 255, 0.15) 0%, transparent 55%), radial-gradient(rgba(255, 255, 255, 0.17) 0%, transparent 35%), #15222d;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
-  -moz-box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
-  box-shadow: rgba(0, 0, 0, 0.55) 0px -8px 25px inset;
   background-size: 1500px 1800px, 600px 1800px;
   background-position: top center;
   background-repeat: no-repeat;
@@ -372,8 +375,12 @@ header {
     background: url(logo.png) center bottom no-repeat;
     background-size: 95%;
     max-height: 153px;
-    line-height: 153px;
     max-width: 513px; }
+  header .fork-me {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto; }
   header .longitudes {
     border-top: 1px solid #1d2a34;
     float: left;
@@ -409,6 +416,15 @@ header {
       text-align: center;
       width: 70px; }
 
+footer {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.55) 0px -4px 3px 0px, rgba(0, 0, 0, 0.55) 0px 8px 25px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.55) 0px -4px 3px 0px, rgba(0, 0, 0, 0.55) 0px 8px 25px inset;
+  box-shadow: rgba(255, 255, 255, 0.55) 0px -4px 3px 0px, rgba(0, 0, 0, 0.55) 0px 8px 25px inset;
+  text-align: center;
+  text-shadow: none;
+  padding-top: 25px;
+  padding-bottom: 80px; }
+
 div.frame {
   height: 29px;
   background: -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 2, color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 6, color-stop(83.333%, transparent), color-stop(100%, rgba(74, 67, 28, 0.4)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 7, color-stop(85.714%, transparent), color-stop(85.714%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0.7)), color-stop(100%, transparent)), url(map.jpg);
@@ -423,6 +439,8 @@ body > article {
   background-position: top center;
   background-image: url(map.jpg);
   background-size: 80px 80px; }
+  body > article:last-of-type {
+    padding-bottom: 100px; }
   body > article p {
     margin-bottom: 1em; }
   body > article figure {
@@ -433,7 +451,8 @@ body > article {
 
 .highlight {
   border: 1px solid rgba(74, 67, 28, 0.4);
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  overflow-x: auto; }
 
 pre {
   margin: 8px;
@@ -441,6 +460,12 @@ pre {
   font-family: 'Bitstream Vera Sans Mono','Courier',monospace; }
 
 @media (max-width: 320px) {
+  html, body {
+    font-size: 16px; }
+
+  .fork-me {
+    width: 70px; }
+
   hgroup {
     max-width: 550px;
     margin: 3.125% auto;
@@ -459,6 +484,9 @@ pre {
     body > article > * {
       margin-left: 3.125%;
       margin-right: 3.125%; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 26px; }
 
   div#demo1 {
     overflow: hidden;
@@ -480,6 +508,12 @@ pre {
       background-color: #273845;
       height: 40px; } }
 @media (min-width: 321px) and (max-width: 480px) {
+  html, body {
+    font-size: 17px; }
+
+  .fork-me {
+    width: 141px; }
+
   hgroup {
     max-width: 550px;
     margin: 2.083% auto;
@@ -498,6 +532,9 @@ pre {
     body > article > * {
       margin-left: 2.083%;
       margin-right: 2.083%; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 34px; }
 
   div#demo1 {
     overflow: hidden;
@@ -519,6 +556,12 @@ pre {
       background-color: #273845;
       height: 40px; } }
 @media (min-width: 481px) and (max-width: 720px) {
+  html, body {
+    font-size: 19px; }
+
+  .fork-me {
+    width: 141px; }
+
   hgroup {
     max-width: 550px;
     margin: 1.389% auto;
@@ -537,6 +580,9 @@ pre {
     body > article > * {
       margin-left: 1.389%;
       margin-right: 1.389%; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 44px; }
 
   div#demo1 {
     overflow: hidden;
@@ -558,6 +604,12 @@ pre {
       background-color: #273845;
       height: 40px; } }
 @media (min-width: 721px) {
+  html, body {
+    font-size: 19px; }
+
+  .fork-me {
+    width: 141px; }
+
   hgroup {
     max-width: 550px;
     margin: 10px auto;
@@ -576,6 +628,9 @@ pre {
     body > article > * {
       margin-left: 10px;
       margin-right: 10px; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 44px; }
 
   div#demo1 {
     overflow: hidden;

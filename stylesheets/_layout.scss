@@ -2,6 +2,15 @@
 
 
 @include longitude(4 6 9) {
+  html, body {
+    font-size: steps(16px 17px 19px);
+  }
+
+
+  .fork-me {
+    width: steps(70px 141px);
+  }
+
   hgroup {
     max-width: (1100px/2);
     margin: gutter() auto;
@@ -16,6 +25,7 @@
         line-height: (244px/2);
       }
     }
+
   }
 
   .body_section {
@@ -31,6 +41,10 @@
     > * {
       @include gutters;
     }
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: steps(26px 34px 44px);
   }
 
   div#demo1 {
